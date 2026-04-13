@@ -5,6 +5,7 @@ uniform sampler2D noise: repeat_enable;
 uniform sampler2D icon;
 
 void fragment() {
-	float offset = texture(noise, UV * TIME / 2.0).b;
-	COLOR = texture(screen, SCREEN_UV * offset);
+	float flow;
+	float offset = texture(noise, vec2(UV.x, UV.y)).b;
+	COLOR = texture(screen, SCREEN_UV / offset);
 }
