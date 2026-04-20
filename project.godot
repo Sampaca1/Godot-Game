@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Godot Game"
+config/name="The Tinker"
 run/main_scene="uid://d24wi67itthkc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+Flips="Area2Ds that flip gravity when you exit them"
 
 [input]
 
@@ -61,3 +65,10 @@ Hover={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+Noise={
+"type": "sampler2D",
+"value": "::2ab6f"
+}
